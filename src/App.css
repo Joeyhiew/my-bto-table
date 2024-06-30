@@ -1,6 +1,11 @@
-.App {
-  height: 100vh;
+body {
+  min-width: 400px;
+  min-height: auto;
 }
+
+/* .App {
+  height: 100vh;
+} */
 
 .App-dark {
   background-color: black;
@@ -29,4 +34,10 @@
 .last-child {
   margin-left: auto;
   margin-right: 24px;
+}
+
+@media (min-width: 400px) {
+  .App {
+    height: 100vh;
+  }
 }

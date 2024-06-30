@@ -46,6 +46,7 @@ const Table = () => {
     {
       title: "Action",
       key: "action",
+      fixed: "right",
       render: (_, record: DataType) => (
         <Button danger type="text" onClick={() => handleDelete(record)}>
           Delete
@@ -89,6 +90,7 @@ const Table = () => {
         dataSource={tableData}
         pagination={{ pageSize: 10 }}
         className={styles.table}
+        scroll={{ x: 840 }}
       ></AntTable>
       {/* ModalForm to add new record */}
       <ModalForm
