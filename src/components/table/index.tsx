@@ -10,16 +10,7 @@ import mockData from "../../mock.json";
 import type { TableProps } from "antd";
 import ModalForm from "../form-modal";
 import styles from "./index.module.scss";
-
-interface DataType {
-  key: string;
-  name: string;
-  address: string;
-  price: number;
-  rating: number;
-  pastAppRate: number;
-}
-
+import { DataType } from "./columns";
 const Table = () => {
   const [tableData, setTableData] = useState<Array<DataType>>([]);
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
