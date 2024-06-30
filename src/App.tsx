@@ -50,7 +50,7 @@ function App() {
   };
 
   return (
-    <div className={appTheme === THEME.DARK ? "App-dark" : ""}>
+    <div className={cx("App", appTheme === THEME.DARK ? "App-dark" : "")}>
       <ConfigProvider
         theme={{
           components: {
