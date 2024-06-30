@@ -1,14 +1,29 @@
 import { useState, useEffect } from "react";
-import { Table as AntTable, Button, Typography } from "antd";
-import { DataType } from "./columns";
+import {
+  Table as AntTable,
+  Button,
+  Typography,
+  Popconfirm,
+  message,
+} from "antd";
 import mockData from "../../mock.json";
 import type { TableProps } from "antd";
 import ModalForm from "../form-modal";
 import styles from "./index.module.scss";
 
+interface DataType {
+  key: string;
+  name: string;
+  address: string;
+  price: number;
+  rating: number;
+  pastAppRate: number;
+}
+
 const Table = () => {
   const [tableData, setTableData] = useState<Array<DataType>>([]);
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
+  const [isDeletePopOpen, setDeletePopOpen] = useState<Array<string>>([]);
 
   useEffect(() => {
     // Set mock JSON data from mock file
@@ -47,10 +62,27 @@ const Table = () => {
       title: "Action",
       key: "action",
       fixed: "right",
+      width: 120,
       render: (_, record: DataType) => (
-        <Button danger type="text" onClick={() => handleDelete(record)}>
-          Delete
-        </Button>
+        <Popconfirm
+          title="Delete the task"
+          description="Are you sure to delete this task?"
+          open={isDeletePopOpen.includes(record.key)}
+          onOpenChange={() => {
+            setDeletePopOpen([...isDeletePopOpen, record.key]);
+          }}
+          onConfirm={() => handleDelete(record)}
+          onCancel={() => {
+            const newVal = isDeletePopOpen.filter((x) => x !== record.key);
+            setDeletePopOpen(newVal);
+          }}
+          okText="Yes"
+          cancelText="No"
+        >
+          <Button danger type="text">
+            Delete
+          </Button>
+        </Popconfirm>
       ),
     },
   ];
@@ -58,6 +90,7 @@ const Table = () => {
   const handleDelete = (record: DataType) => {
     const newData = tableData.filter((x) => x.key !== record.key);
     setTableData(newData);
+    message.success("Successfully deleted");
   };
 
   const handleModalOpen = () => {
@@ -78,6 +111,7 @@ const Table = () => {
     ];
     setTableData(newData);
     setModalOpen(false);
+    message.success("Successfully added");
   };
 
   return (

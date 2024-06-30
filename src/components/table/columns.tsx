@@ -1,6 +1,3 @@
-import type { TableProps } from "antd";
-import { Typography, Button } from "antd";
-
 export interface DataType {
   key: string;
   name: string;
