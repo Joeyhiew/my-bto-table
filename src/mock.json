@@ -1,0 +1,42 @@
+[
+  {
+    "key": "1",
+    "name": "Riverpeaks II",
+    "address": "10 Kampong street",
+    "price": 460000,
+    "rating": 7,
+    "pastAppRate": 2.1
+  },
+  {
+    "key": "2",
+    "name": "Plantation Grove",
+    "address": "123 Jurong West Street",
+    "price": 380000,
+    "rating": 5,
+    "pastAppRate": 0.8
+  },
+  {
+    "key": "3",
+    "name": "Southern Waterfront",
+    "address": "1 Keppel Bay",
+    "price": 780000,
+    "rating": 9,
+    "pastAppRate": 3.8
+  },
+  {
+    "key": "4",
+    "name": "The WaterEdge",
+    "address": "7 Bedok South Avenue",
+    "price": 2300000,
+    "rating": 7,
+    "pastAppRate": 2.1
+  },
+  {
+    "key": "5",
+    "name": "RiverSails",
+    "address": "Marina South Drive",
+    "price": 880000,
+    "rating": 5,
+    "pastAppRate": 0.8
+  }
+]

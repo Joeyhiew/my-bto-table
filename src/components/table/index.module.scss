@@ -1,0 +1,12 @@
+.buttonRow {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 24px;
+}
+
+.table {
+  padding: 8px 24px 24px 24px;
+}
