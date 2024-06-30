@@ -12,6 +12,11 @@ const tailLayout = {
   wrapperCol: { offset: 8, span: 16 },
 };
 
+const layout = {
+  labelCol: { span: 8 },
+  wrapperCol: { span: 16 },
+};
+
 const ModalForm: FC<ModalFormProps> = ({
   isOpen,
   handleSubmit,
@@ -61,7 +66,13 @@ const ModalForm: FC<ModalFormProps> = ({
       onCancel={handleClose}
       destroyOnClose={true}
     >
-      <Form name="bto-form" onFinish={handleSubmit} preserve={false}>
+      <Form
+        name="bto-form"
+        onFinish={handleSubmit}
+        preserve={false}
+        {...layout}
+        style={{ maxWidth: 600 }}
+      >
         <Form.Item<DataType>
           label="Property name"
           name="name"

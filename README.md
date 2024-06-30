@@ -1,3 +1,13 @@
+# My BTO table
+
+Access link: https://master.d32uthjy1bcaej.amplifyapp.com/
+
+Design points:
+
+1. Responsiveness with small screen
+2. Dark and light theme within app
+3. External API call to retrieve locations
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
