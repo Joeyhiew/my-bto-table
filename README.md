@@ -4,9 +4,11 @@ Access link: https://master.d32uthjy1bcaej.amplifyapp.com/
 
 Design points:
 
-1. Responsiveness with small screen
-2. Dark and light theme within app
-3. External API call to retrieve locations
+1. Add new records
+2. Form validation
+3. External API call to add valid locations
+4. Responsiveness with small screen
+5. Dark and light theme within app with caching
 
 # Getting Started with Create React App
 
