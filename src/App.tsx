@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Typography } from "antd";
 import Table from "./components/table";
 import { HomeFilled } from "@ant-design/icons";
-import { Button, ConfigProvider, Input, Space, theme, Switch } from "antd";
+import { ConfigProvider, theme, Switch } from "antd";
 import { ReactComponent as LightSvg } from "./assets/light-mode.svg";
 import { ReactComponent as DarkSvg } from "./assets/dark-mode.svg";
 import type { GetProps } from "antd";
@@ -73,7 +73,7 @@ function App() {
           <Title className="left-margin">My BTO</Title>
           <HomeFilled style={{ fontSize: 24 }} />
           <Switch
-            className="left-margin"
+            className="last-child"
             checkedChildren={<LightIcon />}
             unCheckedChildren={<DarkIcon />}
             defaultChecked={appTheme === THEME.LIGHT}
